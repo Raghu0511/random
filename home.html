@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Home Page</title>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    h1 {
+      margin-bottom: 40px;
+      font-size: 3rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .btn {
+      background: #fff;
+      color: #333;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    }
+    .btn:active {
+      transform: translateY(0);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome Home!</h1>
+  <div class="button-container">
+    <button class="btn" onclick="alert('Button 1 Clicked!')">Click Me</button>
+    <button class="btn" onclick="alert('Button 2 Clicked!')">Surprise</button>
+    <button class="btn" onclick="alert('Button 3 Clicked!')">Press Here</button>
+    <button class="btn" onclick="alert('Button 4 Clicked!')">Try Me</button>
+    <button class="btn" onclick="randomColor()">Magic</button>
+  </div>
+
+  <footer>© 2025 Your Name</footer>
+
+  <script>
+    function randomColor() {
+      document.body.style.background = 
+        'linear-gradient(135deg, ' + 
+        '#' + Math.floor(Math.random()*16777215).toString(16) + ', ' + 
+        '#' + Math.floor(Math.random()*16777215).toString(16) + ')';
+    }
+  </script>
+</body>
+</html>
